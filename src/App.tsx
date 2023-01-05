@@ -1,14 +1,15 @@
-import React from "react";
 import Form from "./componentes/Form";
-import logo from "./logo.svg";
 import Header from "./componentes/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header />
-      <Form />
-    </div>
+      <Routes>
+        <Route path="/" element={<Form />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
