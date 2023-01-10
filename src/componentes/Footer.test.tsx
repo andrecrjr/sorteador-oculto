@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import { RecoilRoot } from "recoil";
 import { Footer } from "./Footer";
@@ -33,22 +33,27 @@ describe("when there is no participants enough", () => {
   });
 });
 
-describe("when there is participants", () => {
+describe("when there is participants enough", () => {
   beforeEach(() => {
     (useParticipantList as jest.Mock).mockReturnValue([
       "andre",
       "carlos",
       "santos",
     ]);
-  });
-  test("you can start the game", () => {
     render(
       <RecoilRoot>
         <Footer />
       </RecoilRoot>
     );
-
+  });
+  test("you can start the game", () => {
     const button = screen.getByRole("button");
     expect(button).not.toBeDisabled();
+  });
+  test("the game has started", () => {
+    const botao = screen.getByRole("button");
+    fireEvent.click(botao);
+    expect(mockNavigate).toHaveBeenCalledTimes(1);
+    expect(mockNavigate).toHaveBeenCalledWith("/sort");
   });
 });

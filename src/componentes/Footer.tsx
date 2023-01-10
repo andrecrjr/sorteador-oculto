@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer>
       <button
         disabled={participants.length < 3}
-        onClick={() => init("/")}
+        onClick={() => init("/sort")}
       ></button>
     </footer>
   );
