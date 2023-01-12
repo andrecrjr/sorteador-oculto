@@ -37,7 +37,9 @@ exports[`settings page should render correctly 1`] = `
   <footer>
     <button
       disabled=""
-    />
+    >
+      Sort
+    </button>
   </footer>
 </div>
 `;

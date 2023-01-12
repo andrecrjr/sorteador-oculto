@@ -16,12 +16,6 @@ const Header = () => {
         }}
         alt="Sorteador"
       />
-      <img
-        src="/imagens/participante.png"
-        style={{ objectFit: "contain", zIndex: 2 }}
-        height={158}
-        alt="participant"
-      />
     </HeaderSection>
   );
 };
