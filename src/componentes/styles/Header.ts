@@ -5,4 +5,5 @@ export const HeaderSection = styled.header`
   flex-direction: column;
   height: auto;
   align-items: center;
+  margin-bottom: 145px;
 `;

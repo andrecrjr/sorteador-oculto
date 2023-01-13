@@ -2,6 +2,7 @@ import React from "react";
 import { useParticipantList } from "../state/hook/useListParticipant";
 import { useNavigate } from "react-router-dom";
 import { useSort } from "../state/hook/useSort";
+import { OrangeButton } from "./styles/Input";
 
 export const Footer = () => {
   const participants = useParticipantList();
@@ -9,7 +10,7 @@ export const Footer = () => {
   const sort = useSort();
   return (
     <footer>
-      <button
+      <OrangeButton
         disabled={participants.length < 3}
         onClick={() => {
           sort();
@@ -17,7 +18,7 @@ export const Footer = () => {
         }}
       >
         Sort
-      </button>
+      </OrangeButton>
     </footer>
   );
 };

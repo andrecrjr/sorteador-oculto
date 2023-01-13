@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  height: 55vh;
+  min-height: 55vh;
+  height: auto;
   width: 100%;
-  border-top-right-radius: 25%;
-  border-top-left-radius: 25%;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
   background: #fff9eb;
   border: 2px solid black;
   padding-top: 50px;
+  padding-bottom: 50px;
+
   position: relative;
   align-self: flex-end;
 

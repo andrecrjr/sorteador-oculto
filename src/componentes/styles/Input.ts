@@ -1,5 +1,14 @@
 import styled, { css } from "styled-components";
 
+export const TitleFormSection = styled.h2`
+  font-size: 20px;
+  line-height: 30px;
+  color: #4b69fd;
+
+  text-align: center;
+  margin-bottom: 36px;
+`;
+
 export const FormSection = styled.form`
   display: flex;
   flex-direction: column;
@@ -8,6 +17,7 @@ export const FormSection = styled.form`
   width: 90%;
   margin: 0 auto;
   position: relative;
+  margin-bottom: 30px;
 
   @media (min-width: 640px) {
     width: 600px;
@@ -58,11 +68,29 @@ export const ButtonForm = styled.button`
   line-height: 24px;
   color: #444444;
   text-transform: capitalize;
+  margin-bottom: 17px;
 
   @media (min-width: 640px) {
     width: 220px;
     height: 50px;
     border-radius: 0px 37.5px 37.5px 0px;
     box-shadow: 4px 4px 0px #000000;
+    margin-bottom: 0;
   }
+`;
+
+export const OrangeButton = styled.button`
+  background: #fe652b;
+  min-width: 155px;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  border-radius: 37.5px;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 14px 14px;
+  display: block;
+  margin: 0 auto;
 `;

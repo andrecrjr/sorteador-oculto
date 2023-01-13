@@ -1,13 +1,14 @@
 import React from "react";
 import { useParticipantList } from "../state/hook/useListParticipant";
+import { ItemList, List } from "./styles/List";
 
 export const ParticipantList = () => {
   const participants: string[] = useParticipantList();
   return (
-    <ul>
+    <List>
       {participants.map((participant) => (
-        <li key={participant}>{participant}</li>
+        <ItemList key={participant}>{participant}</ItemList>
       ))}
-    </ul>
+    </List>
   );
 };

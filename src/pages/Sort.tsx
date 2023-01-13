@@ -9,32 +9,34 @@ export const Sort = () => {
   const [secretFriend, setSecretFriend] = useState("");
   const result = useResultSort();
   return (
-    <FormSection
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (result.has(participant)) {
-          const secretFriend: string = result.get(participant) as string;
-          console.log(result);
-          setSecretFriend(secretFriend);
-        }
-      }}
-    >
-      <SelectForm
-        required
-        placeholder="User Selection"
-        onChange={(e) => {
+    <>
+      <FormSection
+        onSubmit={(e) => {
           e.preventDefault();
-          setParticipant(e.target.value);
+          if (result.has(participant)) {
+            const secretFriend: string = result.get(participant) as string;
+            console.log(result);
+            setSecretFriend(secretFriend);
+          }
         }}
       >
-        {participants.map((item) => (
-          <option key={item} value={item}>
-            {item}
-          </option>
-        ))}
-      </SelectForm>
+        <SelectForm
+          required
+          placeholder="User Selection"
+          onChange={(e) => {
+            e.preventDefault();
+            setParticipant(e.target.value);
+          }}
+        >
+          {participants.map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </SelectForm>
+        <button>Sort your Friend</button>
+      </FormSection>
       {secretFriend && <p role="alert">{secretFriend}</p>}
-      <button>Sort your Friend</button>
-    </FormSection>
+    </>
   );
 };
