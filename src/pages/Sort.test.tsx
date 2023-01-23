@@ -41,7 +41,8 @@ describe("In Sort page", () => {
       </RecoilRoot>
     );
     const options = screen.queryAllByRole("option");
-    expect(options).toHaveLength(3);
+    //there is a default empty option
+    expect(options).toHaveLength(4);
   });
   test("show secret friend when needed", () => {
     render(

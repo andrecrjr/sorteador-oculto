@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { useParticipantList } from "../state/hook/useListParticipant";
 import { useResultSort } from "../state/hook/useSortResult";
-import { FormSection, SelectForm } from "../componentes/styles/Input";
+import {
+  FormSection,
+  OrangeButton,
+  SelectForm,
+} from "../componentes/styles/Input";
 import { FriendSorted } from "../componentes/styles/Section";
 
 export const Sort = () => {
@@ -29,13 +33,14 @@ export const Sort = () => {
             setParticipant(e.target.value);
           }}
         >
+          <option defaultChecked>Selecione seu nome</option>
           {participants.map((item) => (
             <option key={item} value={item}>
               {item}
             </option>
           ))}
         </SelectForm>
-        <button>Sort your Friend</button>
+        <OrangeButton>Sort your Friend</OrangeButton>
       </FormSection>
       {secretFriend && <FriendSorted role="alert">{secretFriend}</FriendSorted>}
     </>
