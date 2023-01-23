@@ -10,7 +10,8 @@ export const Section = styled.section`
   border: 2px solid black;
   padding-top: 50px;
   padding-bottom: 50px;
-
+  display: flex;
+  flex-direction: column;
   position: relative;
   align-self: flex-end;
 
@@ -43,4 +44,11 @@ export const Section = styled.section`
       margin: 0 auto;
     }
   }
+`;
+
+export const FriendSorted = styled.p`
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.75rem;
+  align-self: center;
 `;

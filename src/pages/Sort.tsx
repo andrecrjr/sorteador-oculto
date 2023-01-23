@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParticipantList } from "../state/hook/useListParticipant";
 import { useResultSort } from "../state/hook/useSortResult";
 import { FormSection, SelectForm } from "../componentes/styles/Input";
+import { FriendSorted } from "../componentes/styles/Section";
 
 export const Sort = () => {
   const participants = useParticipantList();
@@ -36,7 +37,7 @@ export const Sort = () => {
         </SelectForm>
         <button>Sort your Friend</button>
       </FormSection>
-      {secretFriend && <p role="alert">{secretFriend}</p>}
+      {secretFriend && <FriendSorted role="alert">{secretFriend}</FriendSorted>}
     </>
   );
 };
