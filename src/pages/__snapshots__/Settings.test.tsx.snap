@@ -2,8 +2,13 @@
 
 exports[`settings page should render correctly 1`] = `
 <div>
+  <h2
+    class="sc-bcXHqe fXFctw"
+  >
+    Vamos Começar!
+  </h2>
   <form
-    class="sc-bcXHqe iGWDYF"
+    class="sc-gswNZR jUNNpV"
   >
     <svg
       class="input--icon"
@@ -20,22 +25,25 @@ exports[`settings page should render correctly 1`] = `
       />
     </svg>
     <input
-      class="sc-gswNZR kIQRhg"
+      class="sc-dkrFOg cSKFOK"
       placeholder="Insira os nomes dos participantes"
       type="text"
       value=""
     />
     <button
-      class="sc-hLBbgP fJiwrw"
+      class="sc-eDvSVe hHRxPm"
       disabled=""
     >
       adicionar
     </button>
     
   </form>
-  <ul />
+  <ul
+    class="sc-gKPRtg eePDnO"
+  />
   <footer>
     <button
+      class="sc-jSUZER fJWasW"
       disabled=""
     >
       Sort
